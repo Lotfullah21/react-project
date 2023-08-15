@@ -1,5 +1,5 @@
 import logo from "../assets/logo/main-logo.png";
-
+import { pageLinks } from "../components/data";
 const Navbar = () => {
   return (
     <nav className="navbar" id="navbar">
@@ -14,35 +14,15 @@ const Navbar = () => {
         </div>
 
         <ul className="nav-links" id="nav-links">
-          <li>
-            <a href="#hero" className="nav-home nav-link scroll-link">
-              home
-            </a>
-          </li>
-
-          <li>
-            <a href="#courses" className="nav-courses nav-link scroll-link">
-              courses
-            </a>
-          </li>
-
-          <li>
-            <a href="#services" className="nav-service nav-link scroll-link">
-              services
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact" className="nav-contact nav-link scroll-link">
-              contact us
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" className="nav-about nav-link scroll-link">
-              about us
-            </a>
-          </li>
+          {pageLinks.map((link) => {
+            return (
+              <li key={link.id}>
+                <a href={link.href} className="nav-home nav-link scroll-link">
+                  {link.title}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>

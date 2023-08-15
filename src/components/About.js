@@ -1,16 +1,13 @@
+import aboutImg from "../assets/school/light-1.jpg";
+import Title from "./Title";
 function About() {
   return (
     <section className="section about" id="about">
-      <div className="section-title">
-        <h2>
-          About <span>us</span>
-        </h2>
-      </div>
-
+      <Title title="about" end="us"></Title>
       <div className="section-center about-center" id="about">
         <article className="about-img">
           <img
-            src="./assets/school/light-1.jpg"
+            src={aboutImg}
             className="about-photo"
             alt="student in the className"
           />
